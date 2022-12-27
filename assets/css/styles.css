@@ -1,0 +1,100 @@
+/***************************************************/
+/******************* CSS reset *********************/
+/***************************************************/
+/*   1. Use a more-intuitive box-sizing model*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /* 2. Remove default margin*/
+  * {
+    margin: 0;
+  }
+  /* 3. Allow percentage-based heights in the application */
+  html, body {
+    height: 100%;
+  }
+  /* Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* 6. Improve media defaults */
+  img, picture, video, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /* 7. Remove built-in form typography styles */
+  button {
+    font: inherit;
+  }
+  /* 8. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /* 9. Create a root stacking context */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/***************************************************/
+/****************** custom CSS *********************/
+/***************************************************/
+:root {
+    --dark: #141414;
+    --contrast: #f0af51;
+    --contrast-light: #ecd9be;
+}
+main {
+    background:
+        radial-gradient(transparent, black),
+        url(../images/camp.webp);
+    background-color: var(--dark);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    padding: 8rem;
+}
+
+h1 {
+    color: var(--contrast);
+    font-size: 4.5rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+
+h2 {
+    color: var(--contrast-light);
+    font-size: 1.5em;
+    font-weight: 400;
+    padding-bottom: 2rem;
+}
+
+.hero-txt {
+   padding-left: 5rem;
+}
+
+.hero-vid {
+    
+}
+
+.CTA {
+    display: flex;
+    align-content: space-between;
+}
+
+footer {
+    background-color: var(--contrast);
+    color: var(--dark);
+    height: 2rem;
+}
