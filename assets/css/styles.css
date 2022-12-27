@@ -2,99 +2,208 @@
 /******************* CSS reset *********************/
 /***************************************************/
 /*   1. Use a more-intuitive box-sizing model*/
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /* 2. Remove default margin*/
-  * {
-    margin: 0;
-  }
-  /* 3. Allow percentage-based heights in the application */
-  html, body {
-    height: 100%;
-  }
-  /* Typographic tweaks!
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin*/
+* {
+  margin: 0;
+}
+
+/* 3. Allow percentage-based heights in the application */
+html,
+body {
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Typographic tweaks!
     4. Add accessible line-height
     5. Improve text rendering */
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  /* 6. Improve media defaults */
-  img, picture, video, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /* 7. Remove built-in form typography styles */
-  button {
-    font: inherit;
-  }
-  /* 8. Avoid text overflows */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /* 9. Create a root stacking context */
-  #root, #__next {
-    isolation: isolate;
-  }
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Remove built-in form typography styles */
+button {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
 
 /***************************************************/
 /****************** custom CSS *********************/
 /***************************************************/
 :root {
-    --dark: #141414;
-    --contrast: #f0af51;
-    --contrast-light: #ecd9be;
+  --dark: #141414;
+  --contrast-dark: #df9937;
+  --contrast: #f0af51;
+  --contrast-light: #ecd9be;
 }
+
 main {
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  min-height: 100vh;
+  height: auto;
+}
+
+.hero {
+  background:
+    linear-gradient(0deg, rgba(20, 20, 20, 0) 2%, rgba(0, 0, 0, 1) 64%),
+    url(../images/camp.webp);
+  background-color: var(--dark);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.hero-txt {
+  padding-right: 30rem;
+}
+
+h1 {
+  color: var(--contrast);
+  font-size: 5rem;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+
+h2 {
+  color: var(--contrast-light);
+  font-size: 2rem;
+  font-weight: 400;
+  padding-bottom: 4rem;
+}
+
+p {
+  color: var(--contrast-light);
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+}
+
+.CTA {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: left;
+  gap: 2rem;
+}
+
+button {
+  background-color: var(--contrast);
+  max-width: 25rem;
+  height: 7rem;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+button img {
+  display: inline;
+  height: 1.7rem;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--contrast-dark);
+  -webkit-box-shadow: 10px 10px 51px 9px rgba(236, 217, 190, 1);
+  -moz-box-shadow: 10px 10px 51px 9px rgba(236, 217, 190, 1);
+  box-shadow: 10px 10px 51px 9px rgba(236, 217, 190, 1);
+}
+
+button:active {
+  -webkit-transform: translate(0px, 4px);
+  -moz-transform: translate(0px, 4px);
+  -ms-transform: translate(0px, 4px);
+  -o-transform: translate(0px, 4px);
+  transform: translate(0px, 4px);
+}
+
+footer {
+  background-color: var(--contrast);
+  color: var(--dark);
+  padding: 1rem 0;
+}
+
+footer p {
+  color: var(--dark);
+  text-align: center;
+  letter-spacing: normal;
+  font-family: 'Poppins', sans-serif;
+}
+
+footer img {
+  display: inline;
+  height: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+footer a:focus,
+a:hover,
+a:active {
+  color: white;
+  text-shadow: 4px 4px 16px rgba(20, 20, 20, 1);
+}
+
+/* reverse the grid, do mobile first and media query for desktop */
+
+@media screen and (min-width: 480px) {
+  .hero {
     background:
-        radial-gradient(transparent, black),
-        url(../images/camp.webp);
+      linear-gradient(270deg, rgba(20, 20, 20, 0) 2%, rgba(0, 0, 0, 1) 64%),
+      url(../images/camp.webp);
     background-color: var(--dark);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100vw;
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    padding: 8rem;
-}
-
-h1 {
-    color: var(--contrast);
-    font-size: 4.5rem;
-    font-weight: 700;
-    padding-bottom: 2rem;
-}
-
-h2 {
-    color: var(--contrast-light);
-    font-size: 1.5em;
-    font-weight: 400;
-    padding-bottom: 2rem;
-}
-
-.hero-txt {
-   padding-left: 5rem;
-}
-
-.hero-vid {
-    
-}
-
-.CTA {
-    display: flex;
-    align-content: space-between;
-}
-
-footer {
-    background-color: var(--contrast);
-    color: var(--dark);
-    height: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 5rem;
+  }
 }
