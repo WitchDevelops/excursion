@@ -13,16 +13,42 @@
   --fw-normal: 400;
   --fw-bold: 700;
   --fw-extrabold: 800;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
 }
 
-
+body {
+  background-color: var(--dark);
+}
 
 main {
   font-family: var(--ff-accent);
+  overflow-x: hidden;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
   padding: 2rem;
 }
 
+h1,
+h2 {
+  margin-bottom: 4rem;
+}
 
+strong {
+  font-weight: var(--fw-extrabold);
+}
+
+/************************ buttons and animations **************/
+button:active {
+  -webkit-transform: translate(0px, 4px);
+  -moz-transform: translate(0px, 4px);
+  -ms-transform: translate(0px, 4px);
+  -o-transform: translate(0px, 4px);
+  transform: translate(0px, 4px);
+}
 /*
 .hero {
   background:
@@ -36,19 +62,11 @@ main {
 }
 */
 
-.download-btns {
-  position: absolute;
-  top: 120vh;
 
-}
-
-.btns {
-  display: flex;
-}
+/************************ hero section **************************/
 
 /* Style the video: 100% width and height to cover the entire window */
 video {
-  display: none;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -57,6 +75,7 @@ video {
   z-index: 1;
 }
 
+/* style the text in the hero section */
 article {
   position: absolute;
   display: grid;
@@ -70,11 +89,6 @@ h1 {
   font-size: 2.618rem;
   line-height: 140.5%;
   letter-spacing: 0.065em;
-}
-
-h1,
-h2 {
-  margin-bottom: 4rem;
 }
 
 h2 {
@@ -98,10 +112,7 @@ header>p {
   margin-bottom: 1rem;
 }
 
-strong {
-  font-weight: var(--fw-extrabold);
-}
-
+/* style the button */
 #CTA {
   /*button text */
   font-family: var(--ff-accent);
@@ -122,26 +133,36 @@ strong {
   place-items: center;
 }
 
-
-
-a {
-  text-decoration: none;
-}
-
-button:hover,
-button:focus,
-button:active {
+#CTA:hover,
+#CTA:focus,
+#CTA:active {
   background-color: var(--contrast-dark);
-
 }
 
-button:active {
-  -webkit-transform: translate(0px, 4px);
-  -moz-transform: translate(0px, 4px);
-  -ms-transform: translate(0px, 4px);
-  -o-transform: translate(0px, 4px);
-  transform: translate(0px, 4px);
+/********************** download section *************************/
+.download-btns {
+  position: absolute;
+  top: 100vh;
+  padding: 10rem 5rem;
+  background:
+    linear-gradient(0deg, rgba(20, 20, 20, 0) 2%, rgba(0, 0, 0, 1) 90%),
+    url(../images/camp.webp)
+    no-repeat
+    center;
+  background-size: cover;
 }
+
+.btns {
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+}
+
+.dwn-btn {
+  max-width: 230px;
+}
+
+/********************** footer section *************************/
 
 footer {
   background-color: var(--contrast);
@@ -150,7 +171,7 @@ footer {
 
  padding: 1rem;
 position: absolute;
-top: 150vh;
+top: calc(200vh - 3rem);
 }
 
 footer p {
