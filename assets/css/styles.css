@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 /***************************************************/
 /****************** custom CSS *********************/
 /***************************************************/
@@ -9,6 +10,8 @@
   --ff-main: 'Raleway', sans-serif;
   --ff-accent:'Poppins', sans-serif;
   --fw-normal: 400;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
 }
 
 body {
@@ -70,11 +73,16 @@ h2 {
 
 p {
   font-family: var(--ff-main);
-  font-style: var(--fw-normal);
   color: var(--contrast-light);
   font-size: 1rem;
+  font-weight: var(--fw-normal);
   letter-spacing: 0.19rem;
-  line-height: 1.188rem;
+  line-height: 1.5rem;
+  letter-spacing: 19.5%;
+}
+
+strong {
+  font-weight: var(--fw-bold);
 }
 
 .CTA {
@@ -87,6 +95,17 @@ p {
 button {
   background-color: var(--contrast);
   padding: 0.875rem;
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  border-radius: 999px;
+  min-width: 226px;
+  width: auto;
+  display: grid;
+  place-items: center;
+
 }
 
 a {
