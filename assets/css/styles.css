@@ -43,8 +43,8 @@ strong {
 
 /************************ buttons and animations **************/
 button:active,
-.dwn-btn:hover,
 .dwn-btn:focus,
+.dwn-btn:hover,
 .dwn-btn:active {
   -webkit-transform: translate(0px, 4px);
   -moz-transform: translate(0px, 4px);
@@ -82,6 +82,7 @@ video {
 article {
   position: absolute;
   display: grid;
+  max-width: 500px;
   z-index: 2;
 }
 
@@ -136,10 +137,16 @@ header>p {
   place-items: center;
 }
 
-#CTA:hover,
 #CTA:focus,
+#CTA:hover,
 #CTA:active {
   background-color: var(--contrast-dark);
+}
+
+@media screen and (min-width: 500px) {
+  .hero {
+
+  }
 }
 
 /********************** download section *************************/
@@ -181,7 +188,7 @@ footer p {
   color: var(--dark);
   text-align: center;
   letter-spacing: normal;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--ff-accent);
 }
 
 footer img {
@@ -198,7 +205,7 @@ footer a:focus,
 a:hover,
 a:active {
   color: white;
-  
+
 }
 
 /* reverse the grid, do mobile first and media query for desktop 
