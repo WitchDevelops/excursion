@@ -42,7 +42,10 @@ strong {
 }
 
 /************************ buttons and animations **************/
-button:active {
+button:active,
+.dwn-btn:hover,
+.dwn-btn:focus,
+.dwn-btn:active {
   -webkit-transform: translate(0px, 4px);
   -moz-transform: translate(0px, 4px);
   -ms-transform: translate(0px, 4px);
