@@ -6,42 +6,57 @@
   --contrast-dark: #df9937;
   --contrast: #f0af51;
   --contrast-light: #ecd9be;
+  --ff-main: 'Raleway', sans-serif;
+  --ff-accent:'Poppins', sans-serif;
+}
+
+body {
+  max-width: 100%;
+    overflow-x: hidden;
 }
 
 main {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--ff-accent);
 }
+
 
 section {
   min-height: 100vh;
   height: auto;
 }
 
+/*
 .hero {
   background:
+    var(--dark)
     linear-gradient(0deg, rgba(20, 20, 20, 0) 2%, rgba(0, 0, 0, 1) 64%),
-    url(../images/camp.webp);
-  background-color: var(--dark);
+    url(../images/camp.webp)
+    no-repeat
+    center;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
+  display: grid;
 }
+*/
 
-.hero-txt {
-  padding-right: 30rem;
+/* Style the video: 100% width and height to cover the entire window */
+#vid-bg {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 h1 {
   color: var(--contrast);
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
   padding-bottom: 2rem;
 }
 
 h2 {
   color: var(--contrast-light);
-  font-size: 2rem;
+  font-size: rem;
   font-weight: 400;
   padding-bottom: 4rem;
 }
