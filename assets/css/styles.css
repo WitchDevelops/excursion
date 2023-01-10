@@ -15,13 +15,11 @@
   --fw-extrabold: 800;
 }
 
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+
 
 main {
   font-family: var(--ff-accent);
+  padding: 2rem;
 }
 
 
@@ -38,19 +36,31 @@ main {
 }
 */
 
+.download-btns {
+  position: absolute;
+  top: 120vh;
+
+}
+
+.btns {
+  display: flex;
+}
+
 /* Style the video: 100% width and height to cover the entire window */
 video {
-  position: fixed;
+  display: none;
+  position: absolute;
   right: 0;
   bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 1;
 }
 
 article {
-  position: fixed;
+  position: absolute;
   display: grid;
-  padding: 2rem;
+  z-index: 2;
 }
 
 h1 {
@@ -76,7 +86,7 @@ h2 {
   letter-spacing: 0.085em;
 }
 
-p {
+header>p {
   font-family: var(--ff-main);
   color: var(--contrast-light);
   font-size: 1rem;
@@ -92,7 +102,7 @@ strong {
   font-weight: var(--fw-extrabold);
 }
 
-button {
+#CTA {
   /*button text */
   font-family: var(--ff-accent);
   font-weight: var(--fw-extrabold);
@@ -136,7 +146,11 @@ button:active {
 footer {
   background-color: var(--contrast);
   color: var(--dark);
-  padding: 1rem 0;
+  font-family: var(--ff-main);
+
+ padding: 1rem;
+position: absolute;
+top: 150vh;
 }
 
 footer p {
@@ -160,7 +174,7 @@ footer a:focus,
 a:hover,
 a:active {
   color: white;
-  text-shadow: 4px 4px 16px rgba(20, 20, 20, 1);
+  
 }
 
 /* reverse the grid, do mobile first and media query for desktop 
