@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
 /***************************************************/
 /****************** custom CSS *********************/
 /***************************************************/
@@ -8,7 +9,7 @@
   --contrast: #f0af51;
   --contrast-light: #ecd9be;
   --ff-main: 'Raleway', sans-serif;
-  --ff-accent:'Poppins', sans-serif;
+  --ff-accent: 'Poppins', sans-serif;
   --fw-normal: 400;
   --fw-bold: 700;
   --fw-extrabold: 800;
@@ -16,18 +17,13 @@
 
 body {
   max-width: 100%;
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 main {
   font-family: var(--ff-accent);
 }
 
-
-section {
-  min-height: 100vh;
-  height: auto;
-}
 
 /*
 .hero {
@@ -66,8 +62,9 @@ h1 {
   letter-spacing: 0.065em;
 }
 
-h1, h2 {
-   margin-bottom: 4rem;
+h1,
+h2 {
+  margin-bottom: 4rem;
 }
 
 h2 {
@@ -95,39 +92,37 @@ strong {
   font-weight: var(--fw-extrabold);
 }
 
-
-
 button {
-  background-color: var(--contrast);
-  padding: 0.875rem;
+  /*button text */
   font-family: var(--ff-accent);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-extrabold);
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.065em;
   text-transform: uppercase;
+  /*button shape&color */
   border-radius: 999px;
+  background-color: var(--contrast);
   min-width: 226px;
   width: auto;
+  min-height: 52px;
+  padding: 14px 22px;
+  /*center the text */
   display: grid;
   place-items: center;
-
 }
+
+
 
 a {
   text-decoration: none;
 }
 
-button img {
-  display: inline;
-  height: 1.7rem;
-}
-
 button:hover,
-button:focus {
+button:focus,
+button:active {
   background-color: var(--contrast-dark);
-  -webkit-box-shadow: 10px 10px 51px 9px rgba(236, 217, 190, 1);
-  -moz-box-shadow: 10px 10px 51px 9px rgba(236, 217, 190, 1);
-  box-shadow: 10px 10px 51px 9px rgba(236, 217, 190, 1);
+
 }
 
 button:active {
@@ -168,7 +163,7 @@ a:active {
   text-shadow: 4px 4px 16px rgba(20, 20, 20, 1);
 }
 
-/* reverse the grid, do mobile first and media query for desktop */
+/* reverse the grid, do mobile first and media query for desktop 
 
 @media screen and (min-width: 480px) {
   .hero {
@@ -185,3 +180,4 @@ a:active {
     gap: 5rem;
   }
 }
+*/
