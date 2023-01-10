@@ -19,11 +19,11 @@
 
 body {
   background-color: var(--dark);
+  overflow-x: hidden;
 }
 
 main {
   font-family: var(--ff-accent);
-  overflow-x: hidden;
 }
 
 section {
@@ -147,8 +147,10 @@ header>p {
 #CTA:hover,
 #CTA:active {
   background-color: var(--contrast-dark);
+  color:white;
 }
 
+/**************************** tablet styles *************************/
 @media screen and (min-width: 500px) {
   #vid-crop {
     display: none;
@@ -156,20 +158,33 @@ header>p {
 
   #vid-full {
     display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-height: 70%;
+    max-height: 50vh;
   }
-.hero {
-  display: grid;
-  place-items: center;
+
+  .hero {
+    display: grid;
+    place-items: center;
+  }
+
+  article {
+    margin-left: 2rem;
+  }
 }
 
-header > p {
-  margin-top: unset;
-}
+/*************************** desktop styles *************************/
+@media screen and (min-width: 1000px) {
+  #vid-full {
+    max-height: 90vh;
+  }
+  
+  .hero {
+    display: flex;
+  }
+
+  article {
+    position: unset;
+    margin-left: 5rem;
+  }
 }
 
 /********************** download section *************************/
@@ -193,6 +208,16 @@ header > p {
   max-width: 230px;
 }
 
+@media screen and (min-width: 700px) {
+ .download-btns {
+  display: grid;
+  place-items: center;
+ }
+ 
+  .btns {
+ display: flex;
+ } 
+}
 /********************** footer section *************************/
 
 footer {

@@ -32,7 +32,7 @@
         <section class="hero">
             <div class="hero-vid">
                 <video id="vid-crop" autoplay muted loop>
-                    <source  src="./assets/images/video-cropped.mp4" type="video/mp4" media="all and (max-width: 500px)">
+                    <source src="./assets/images/video-cropped.mp4" type="video/mp4" media="all and (max-width: 500px)">
                 </video>
                 <video id="vid-full" autoplay muted loop>
                     <source src="./assets/images/excursion.mp4" type="video/mp4" media="all and (min-width: 500px)">
@@ -46,7 +46,7 @@
                         around you.</h2>
                 </header>
                 <div class="CTA">
-                    <a href="#download"><button id="CTA">download the app</button></a>
+                    <a href="#download"><button id="CTA" tabindex=0>download the app</button></a>
                 </div>
             </article>
         </section>
@@ -54,10 +54,14 @@
             <h2>Available both for Android and for iPhone:</h2>
             <div class="btns">
                 <a href="https://www.apple.com/app-store/" target="blank" rel="noopener">
-                    <img class="dwn-btn" src="./assets/images/appstore.png" alt="appstore icon" />
+                    <button tabindex=1>
+                        <img class="dwn-btn" src="./assets/images/appstore.png" alt="appstore icon" />
+                    </button>
                 </a>
                 <a href="https://play.google.com/store/games?hl=en&gl=US" target="blank" rel="noopener">
-                    <img class="dwn-btn" src="./assets/images/playstore.png" alt="playstore icon" />
+                    <button tabindex=2>
+                        <img class="dwn-btn" src="./assets/images/playstore.png" alt="playstore icon" />
+                    </button>
                 </a>
             </div>
         </section>
