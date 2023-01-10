@@ -52,6 +52,7 @@ button:active,
   -o-transform: translate(0px, 4px);
   transform: translate(0px, 4px);
 }
+
 /*
 .hero {
   background:
@@ -69,13 +70,17 @@ button:active,
 /************************ hero section **************************/
 
 /* Style the video: 100% width and height to cover the entire window */
-video {
+#vid-crop {
   position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100vw;
   min-height: 100vh;
   z-index: 1;
+}
+
+#vid-full {
+  display: none;
 }
 
 /* style the text in the hero section */
@@ -120,7 +125,7 @@ header>p {
 #CTA {
   /*button text */
   font-family: var(--ff-accent);
-  font-weight: var(--fw-extrabold);
+  font-weight: var(--fw-bold);
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: 0.065em;
@@ -129,6 +134,7 @@ header>p {
   border-radius: 999px;
   background-color: var(--contrast);
   min-width: 226px;
+  max-width: 500px;
   width: auto;
   min-height: 52px;
   padding: 14px 22px;
@@ -144,9 +150,26 @@ header>p {
 }
 
 @media screen and (min-width: 500px) {
-  .hero {
-
+  #vid-crop {
+    display: none;
   }
+
+  #vid-full {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+height: 70%;
+  }
+.hero {
+  display: grid;
+  place-items: center;
+}
+
+header > p {
+  margin-top: unset;
+}
 }
 
 /********************** download section *************************/
@@ -156,9 +179,7 @@ header>p {
   padding: 10rem 5rem;
   background:
     linear-gradient(0deg, rgba(20, 20, 20, 0) 2%, rgba(0, 0, 0, 1) 90%),
-    url(../images/camp.webp)
-    no-repeat
-    center;
+    url(../images/camp.webp) no-repeat center;
   background-size: cover;
 }
 
@@ -178,10 +199,10 @@ footer {
   background-color: var(--contrast);
   color: var(--dark);
   font-family: var(--ff-main);
-
- padding: 1rem;
-position: absolute;
-top: calc(200vh - 3rem);
+  width: 100vw;
+  padding: 1rem;
+  position: absolute;
+  top: calc(200vh - 3rem);
 }
 
 footer p {
