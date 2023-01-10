@@ -8,6 +8,7 @@
   --contrast-light: #ecd9be;
   --ff-main: 'Raleway', sans-serif;
   --ff-accent:'Poppins', sans-serif;
+  --fw-normal: 400;
 }
 
 body {
@@ -49,6 +50,8 @@ video {
 
 article {
   position: fixed;
+  display: grid;
+  padding: 2rem;
 }
 
 h1 {
@@ -66,9 +69,12 @@ h2 {
 }
 
 p {
+  font-family: var(--ff-main);
+  font-style: var(--fw-normal);
   color: var(--contrast-light);
-  font-size: 1.2rem;
-  letter-spacing: 4px;
+  font-size: 1rem;
+  letter-spacing: 0.19rem;
+  line-height: 1.188rem;
 }
 
 .CTA {
@@ -80,22 +86,7 @@ p {
 
 button {
   background-color: var(--contrast);
-  max-width: 25rem;
-  height: 7rem;
-  border: none;
-  border-radius: 8px;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: space-between;
-  gap: 0.5rem;
-  font-size: 1.2rem;
-  -webkit-transition: background 0.2s ease-in-out;
-  -moz-transition: background 0.2s ease-in-out;
-  -ms-transition: background 0.2s ease-in-out;
-  -o-transition: background 0.2s ease-in-out;
-  transition: background 0.2s ease-in-out;
+  padding: 0.875rem;
 }
 
 a {
