@@ -18,12 +18,23 @@
 }
 
 body {
-  background-color: var(--dark);
+  background-color: black;
   overflow-x: hidden;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+  place-items: center;
 }
 
 main {
   font-family: var(--ff-accent);
+   /* grid item in body grid */
+   grid-row: 1 / 2;
+   /* own grid */
+   display: grid;
+   grid-template-rows: 3fr auto;
+   grid-template-columns: 1fr;
 }
 
 section {
@@ -68,6 +79,25 @@ button:active,
 
 
 /************************ hero section **************************/
+
+.hero {
+  /* own grid */
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.hero-vid {
+  grid-column: 1 / 2;
+}
+
+video {
+  max-width: 100%;
+}
+
+.hero-text {
+  grid-column: 2 / 3;
+}
 
 /* Style the video: 100% width and height to cover the entire window */
 #vid-crop {
@@ -226,8 +256,11 @@ footer {
   font-family: var(--ff-main);
   width: 100vw;
   padding: 1rem;
-  position: absolute;
+
   top: calc(200vh - 3rem);
+  /* grid item in body grid */
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
 }
 
 footer p {
